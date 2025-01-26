@@ -18,7 +18,16 @@ function guess() {
 
 function compareValue(randomNum){
     let newGuess = guess();
-    
+    //note: think of this yourself, dont use chatgpt
+    for(i = 0; i < 10; i++){
+        if(newGuessguess>randomNum){
+            
+        }else if(newGuess<randomNum){
+
+        }else{
+
+        }
+    }
 }
 
 
