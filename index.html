@@ -6,13 +6,21 @@
     <title>Making Calculator</title>
 </head>
 <body>
+    <h1>Number Guessing Game </h1>
+
     <div>
-        <input type="number">
+        <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
     </div>
+
+    <label for="quantity">Enter a guess</label>
+    <input type="number" id="quantity" name="quantity">
+    <button onclick="guess()">Submit guess</button>
+    
+    <p id="output"></p>
+
+  
     
 
-    
-
-    <a href="calculator.js"></a>
+    <script src="calculator.js"></script>
 </body>
 </html>
