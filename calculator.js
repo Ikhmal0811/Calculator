@@ -1,9 +1,14 @@
 // 1. generate random number
 
-let randomNum = Math.floor((Math.random() * 100) + 1);
+let randomNum = Math.floor((Math.random() * 101) );
 // document.getElementById("output").innerHTML = randomNum;
 
-document.getElementById("submit_guess").addEventListener("click",guess)  
+//this is global counter
+let counter =0;
+
+document.getElementById("submit_guess").addEventListener("click",function() {
+    compareValue(randomNum);
+})
 
 
 
@@ -18,16 +23,26 @@ function guess() {
 
 function compareValue(randomNum){
     let newGuess = guess();
+    counter++;  
     //note: think of this yourself, dont use chatgpt
-    for(i = 0; i < 10; i++){
-        if(newGuessguess>randomNum){
-            
-        }else if(newGuess<randomNum){
+    
+        if(counter != 0){
+            if(newGuess>randomNum){
+                document.getElementById("p_guesess").innerHTML = "Previouse guess: " + newGuess[counter];
+                document.getElementById("rightwrong").innerHTML = "Wrong too high";
 
-        }else{
-
-        }
-    }
+            }else if(newGuess<randomNum){
+                document.getElementById("p_guesess").innerHTML = newGuess;
+                document.getElementById("rightwrong").innerHTML = "Wrong too low";
+    
+            }else{
+                document.getElementById("p_guesess").innerHTML = newGuess;
+                document.getElementById("rightwrong").innerHTML = "correct";
+            }
+        }      
+        
+    
+    document.getElementById("p_guesses").innerHTML = counter;
 }
 
 
